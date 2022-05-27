@@ -25,3 +25,22 @@ const links = [
     }
     
   ]
+
+const list = document.querySelector('ol');
+
+for (const week of links){
+    //creating the items of the list
+    let item = document.createElement("li");
+    //each item should have a link
+    let link = document.createElement("a");
+    //setting the href attribute for each week link
+    link.setAttribute("href", week.url);
+    //Adding the label to the link
+    link.textContent = week.label;
+
+    //appending the link into the week item
+    item.appendChild(link);
+
+    //appending the week into the list of weeks(portfolio)
+    list.appendChild(item);
+}
