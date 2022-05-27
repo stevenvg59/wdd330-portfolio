@@ -4,6 +4,27 @@ body {
   }
   
   h1 {
-    background-color: antiquewhite;
+    background-color: rgb(40, 181, 185);
     padding: 1em;
+    text-align: center;
+  }
+
+  p {
+      padding: .5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  ol {
+    list-style-type:none;
+    padding-inline-start: 20px;
+  }
+
+  li {
+      margin: 5px;
+  }
+
+  main {
+      text-align: center;
   }
