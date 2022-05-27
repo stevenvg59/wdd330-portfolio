@@ -33,10 +33,10 @@ for (const week of links){
     let item = document.createElement("li");
     //each item should have a link
     let link = document.createElement("a");
-    //setting the href attribute for each week link
-    link.setAttribute("href", week.url);
     //Adding the label to the link
     link.textContent = week.label;
+    //setting the href attribute for each week link
+    link.setAttribute("href", week.url);
 
     //appending the link into the week item
     item.appendChild(link);
