@@ -1,16 +1,18 @@
 body {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
   }
   
   h1 {
     background-color: rgb(40, 181, 185);
     padding: 1em;
     text-align: center;
+    margin-top: 0;
   }
 
   p, img {
-      padding: .5em;
+      padding-left: 1em;
   }
 
   a {
