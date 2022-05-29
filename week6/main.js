@@ -1,5 +1,9 @@
 let addedTask = document.getElementById("addedTask");
 let addBtn = document.getElementById("add");
+let counter = document.getElementById("counter");
+let pendingTask = document.getElementById("pending");
+let counterTask = 0;
+let pending = 0;
 
 addBtn.addEventListener('click', e => {
     e.preventDefault();
@@ -12,11 +16,12 @@ addBtn.addEventListener('click', e => {
     //Creating a new line
     let newLine = document.createElement("div");
 
-    //Creating the checkbox and setting its proper attributes
-    let newCheckbox = document.createElement("input");
-    newCheckbox.setAttribute("type", "checkbox");
-    newCheckbox.setAttribute("class", "completeTask");
-    newLine.appendChild(newCheckbox);
+    //Creating the complete button and setting its proper attributes
+    let newCheck = document.createElement("input");
+    newCheck.setAttribute("type", "button");
+    newCheck.setAttribute("class", "completeTask");
+    newCheck.setAttribute("value", "DONE");
+    newLine.appendChild(newCheck);
 
     //Creating the text field with the task added previously
     let newTaskName = document.createElement("input");
@@ -37,6 +42,18 @@ addBtn.addEventListener('click', e => {
 
     //Making the new task line blank
     document.getElementById("newTask").value = "";
+
+    //Focusing the line getting ready for entering the new task
+    document.getElementById("newTask").focus();
+    
+    //Couting how many tasks there are
+    counterTask++;
+    counter.innerHTML="You have " + counterTask + " tasks in your list";
+
+    pending++;
+    pendingTask.innerHTML = "and " + pending + " pending tasks";
+
+
     }
 
     //If the input task field is empty leave a message alert
@@ -45,7 +62,7 @@ addBtn.addEventListener('click', e => {
     }
 });
 
-//Code for delete button
+//DELETE BUTTON
 addedTask.addEventListener('click', e => {
     e.preventDefault();
     //If the deleteTask button is clicked
@@ -54,6 +71,34 @@ addedTask.addEventListener('click', e => {
 
         //Delete the line
         deleteLine.parentNode.removeChild(deleteLine);
+
+        //Couting how many tasks there are
+        counterTask--;
+        counter.innerHTML="You have " + counterTask + " tasks in your list";
+
+        if (pending != 0) {
+            pending--;
+        }
+        pendingTask.innerHTML = "and " + pending + " pending tasks";
+        
     }
 });
 
+//COMPLETED TASK BUTTON
+//When this button is clicked the task description turns into red
+addedTask.addEventListener('click', e => {
+    e.preventDefault();
+    //If the completeTask button is clicked
+    if(e.target.classList.contains('completeTask')){
+        let completed = e.target.parentNode;
+
+        //Turns into red
+        completed.childNodes[1].setAttribute("style","text-decoration: line-through");
+
+        
+        if (pending != 0) {
+            pending--;
+        }
+        pendingTask.innerHTML = "and " + pending + " pending tasks";
+    }
+});
