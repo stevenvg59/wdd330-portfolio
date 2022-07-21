@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FINAL PROJECT</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="init()">
+
+  <main class="container vertical">    
+    <h1>POKEMON GAME 😎</h1>
+
+    <section class="vertical">
+        <h2>Choose your pokemon</h2>
+        <p>(pick up a number between 1 and 150):</p>
+        <input type="number" id="pokemon-id" min="1" max="150" value="1" />
+        <button id="select">SELECT</button> 
+    </section>
+    
+    <div class="horizontal">
+
+    
+    <section class="card myPokemon">
+        
+        <div class="card-pokemon">
+            <img src="" alt="Pokemon" class="card-pokemon-image">
+            <h2 class="card-pokemon-name"></h2>
+            <p><span class="card-pokemon-hp"></span> HP</p>
+        </div>
+        <div class="card-pokemon-description">
+            <div class="card-pokemon-attributes">
+                <h3>Attack <span class="num card-pokemon-attack"></span></h3>
+            </div>
+            <div class="card-pokemon-attributes">
+                <h3>Defense <span class="num card-pokemon-defense"></span></h3>
+            </div>
+                 
+        </div>
+    </section>
+
+    <div class="vertical">
+      <p class="versus">VS</p>
+      <button id="fight">FIGHT</button><br>
+      <h2 class="fightResult"></h2>
+    </div>
+    
+
+    <section class="card randomPokemon">
+      <div class="card-random">
+          <img src="" alt="Pokemon" class="card-random-image">
+          <h2 class="card-random-name"></h2>
+          <p><span class="card-random-hp"></span> HP</p>
+      </div>
+      <div class="card-random-description">
+          <div class="card-random-attributes">
+              <h3>Attack <span class="num card-random-attack"></span></h3>
+          </div>
+          <div class="card-random-attributes">
+              <h3>Defense <span class="num card-random-defense"></span></h3>
+          </div>        
+      </div>
+      <button id="getRand">Get a random opponent</button>
+    </section>
+
+    </div>
+  </main>
+  
+
+  <script src="main.js"></script>
+</body>
+
+</html>

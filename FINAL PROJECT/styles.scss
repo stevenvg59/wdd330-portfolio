@@ -1,0 +1,143 @@
+/*VARIABLES*/
+$color1 : rgb(236, 51, 51);
+$color2: rgb(230, 245, 21);
+$color3: white;
+
+$primary-font: 'Whitney-Bold', sans-serif;
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: $color1;
+    font-family: $primary-font;
+}
+main {
+    display: block;
+}
+
+.container {
+    height: auto;
+}
+
+.vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 6em;
+    
+}
+
+h1, h2, h3, p, .card {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.versus {
+    font-size: 2.5em;
+    font-weight: bold
+}
+
+button {
+    background-color: $color2;
+    color: $color3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;    
+    font-size: 20px;
+}
+
+input {
+    text-align: right;
+    margin-bottom: 20px;
+    width: 70px;
+    height: 40px;
+    font-size: 1.5em;
+}
+
+.card-random, .card-pokemon {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background-color: $color3;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    background-image: url("/assets/Campo_de_batalla_DPPt_2.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+
+    img {
+        margin-top: 80px;
+        width: 55%;        
+    }
+
+    p {
+        margin-top: 0;
+        color: $color3;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+.fightResult {
+    font-size: 2em;
+}
+
+
+.card {
+    background-color: $color3;
+    border-radius: 20px;    
+    width: 300px;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+#getRand {
+    margin-bottom: 10px;
+}
+
+.card-pokemon-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    :nth-child(1) h3{
+        margin-top: 30px;
+    }
+}
+
+.num {
+    font-size: 1.4em;
+    margin-top: 20px;
+}
